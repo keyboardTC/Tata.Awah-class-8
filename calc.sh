@@ -60,5 +60,10 @@ while true; do
             *) 
 			echo "invalid Operation" ;;
         esac
-
+# When the operation is complete, redisplay the menu.
+     echo "
+      Select your next Operation ?
+      Add 
+      Subtract
+      Exit"
 done
