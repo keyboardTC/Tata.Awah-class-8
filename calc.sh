@@ -69,3 +69,5 @@ Please Select your next Operation ?
     Exit"
 done
 
+echo "
+Thanks for using humber calculator. BYE ===>"
