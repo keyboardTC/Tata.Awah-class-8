@@ -29,4 +29,18 @@ while true; do
     	 read command
     done
 
+# Capture user iteger inout     
+	echo "Enter first number?  "
+    read n1
+        while  [[ -z $n1 ]] || ! [[ "$n1" =~ ^-?[0-9]+$ ]]; do
+	       echo "Please Enter valid first integer ?  "
+           read n1
+        done
+	echo "Enter second number ?  "
+    read n2
+    	while [[ -z $n2 ]] || ! [[ "$n2" =~ ^-?[0-9]+$ ]]; do
+	       echo "Please Enter valid second integer ?  "
+           read n2
+        done
+
 done
