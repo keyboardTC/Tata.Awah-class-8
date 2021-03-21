@@ -19,7 +19,6 @@ while true; do
     if [[ $command == "exit" || $command == "Exit" ]]; then
     	break
     fi
-.    
 # If the selection does not match a support operation, display an error message.
     while [[ "$command" != "Add" ]] && [[ "$command" != "Subtract" ]] && [[ "$command" != "Exit" ]]; do
     	echo "PLease select a valid operation below (* It's Case Sensitive )
@@ -28,7 +27,9 @@ while true; do
     	 Exit"
     	 read command
     done
-
+    if [[ $command == "exit" || $command == "Exit" ]]; then
+    	break
+    fi 
 # Capture user iteger inout     
 	echo "Enter first number?  "
     read n1
@@ -61,9 +62,10 @@ while true; do
 			echo "invalid Operation" ;;
         esac
 # When the operation is complete, redisplay the menu.
-     echo "
-      Select your next Operation ?
-      Add 
-      Subtract
-      Exit"
+  echo "
+Please Select your next Operation ?
+    Add 
+    Subtract
+    Exit"
 done
+
