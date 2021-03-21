@@ -42,5 +42,23 @@ while true; do
 	       echo "Please Enter valid second integer ?  "
            read n2
         done
+# Do the calculation with user's input
+        case "$command" in 
+            "add"|"Add"|"ADD")
+            	let "op=$n1 + $n2" 
+				#op = expr $n1 + $n2
+				echo "$n1 + $n2 = $op"  ;;
+            "subtract"|"Subtract"|"SUBTRACTION") 
+            	let "op=$n1 - $n2" 
+				echo "$n1 - $n2 = $op"  ;;
+            "multiply"|"Multiply"|"MULTIPLY") 
+            	let "op=$n1 * $n2" 
+				echo "$n1 * $n2 = $op"  ;;
+            "divide"|"Divide"|"DIVIDE") 
+            	let "op=$n1 / $n2" 
+				echo "$n1 / $n2 = $op" ;;
+            *) 
+			echo "invalid Operation" ;;
+        esac
 
 done
